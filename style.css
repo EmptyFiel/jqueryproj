@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
 }
@@ -24,7 +24,7 @@ body {
     margin-right: -4px;
     margin-bottom: -4px;
     transition: .25s;
-
+    perspective:50px;
 }
 
 /*.box:hover {*/
@@ -35,7 +35,7 @@ body {
 /*    position: absolute;*/
 /*}*/
 
-.boxf{
+/* .boxf{
     position: absolute;
     display: inline-block;
     background: green;
@@ -43,5 +43,91 @@ body {
     width: 150px;
     transform:  rotate(70deg) skew(-20deg) translate(-5px, 20px);
     z-index: 999;
+} */
+
+
+:root{ 
+    --black: hsl(0, 0%, 11%);
+    --time: 500ms;
 }
 
+
+*,
+::before,
+::after {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body {
+width: 100%;
+max-width: 640px;
+padding: 16px;
+
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+button {
+height: 44px;
+padding: 0 16px;
+
+color: white;
+background: hsl(0, 0%, 11%);
+border: none;
+cursor: pointer;
+}
+
+#parent {
+width: 100%;
+aspect-ratio: 1;
+
+perspective: 1000px;
+}
+
+.child {
+width: 500px;
+height: 500px;
+
+position: relative;
+
+perspective: 1000px;
+transform-style: preserve-3d;
+transition: transform var(--time);
+
+border: 1px solid var(--black);
+
+}
+
+#parent[data-rotate="true"] .child {
+transform: translate3d(0, 0, -200px) rotateX(45deg) rotateY(0deg)
+    rotateZ(45deg);
+}
+
+.grandChild {
+width: 20%;
+aspect-ratio: 1;
+
+position: relative;
+
+border: 1px solid var(--black);
+transition: transform var(--time);
+display: inline-block;
+margin-right: -4px;
+margin-bottom: -4px;
+
+}
+
+#parent[data-rotate="true"] .grandChild {
+transition-delay: var(--time);
+}
+
+#parent[data-rotate="true"] .grandChild:nth-child(2) {
+transform: translate3d(0, 0, 20px);
+}
+
+#parent[data-rotate="true"].grandChild:nth-child(3) {
+transform: translate3d(0, 0, 40px);
+}
