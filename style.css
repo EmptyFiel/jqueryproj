@@ -1,49 +1,7 @@
-/* body {
+body {
     margin: 0;
     padding: 0;
 }
-
-#bob{
-    width: 100vw;
-    height: 100vh;
-    background-color: lightblue;
-    margin: 0;
-    padding: 0;
-
-}
-
-.box {
-    border: solid black 1px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: red;
-    height: 5vh;
-    width: 5vw;
-    display: inline-flex;
-    margin-right: -4px;
-    margin-bottom: -4px;
-    transition: .25s;
-    perspective:50px;
-}
-
-/*.box:hover {*/
-/*    box-shadow:*/
-/*            30px 30px 0 rgba(0,0,0,0.2),    !* hard side shadow *!*/
-/*            30px 30px 60px rgba(0,0,0,0.25); !* soft outer shadow *!*/
-/*    z-index: 999;*/
-/*    position: absolute;*/
-/*}*/
-
-/* .boxf{
-    position: absolute;
-    display: inline-block;
-    background: green;
-    height: calc(5vw * sin(70deg));
-    width: 150px;
-    transform:  rotate(70deg) skew(-20deg) translate(-5px, 20px);
-    z-index: 999;
-} */
 
 
 :root{ 
