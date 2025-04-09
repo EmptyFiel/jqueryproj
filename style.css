@@ -31,7 +31,7 @@ gap: 16px;
 #parent {
 width: 100%;
 aspect-ratio: 1;
-
+margin:auto;
 perspective: 1000px;
 }
 
@@ -46,6 +46,7 @@ transform-style: preserve-3d;
 transition: transform var(--time);
     transform: translate3d(0, 0, -200px) rotateX(45deg) rotateY(0deg)
     rotateZ(45deg);
+    margin:auto;
 }
 
 .grandChild {
