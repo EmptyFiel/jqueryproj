@@ -28,16 +28,6 @@ flex-direction: column;
 gap: 16px;
 }
 
-button {
-height: 44px;
-padding: 0 16px;
-
-color: white;
-background: hsl(0, 0%, 11%);
-border: none;
-cursor: pointer;
-}
-
 #parent {
 width: 100%;
 aspect-ratio: 1;
@@ -54,38 +44,29 @@ position: relative;
 perspective: 1000px;
 transform-style: preserve-3d;
 transition: transform var(--time);
-
-border: 1px solid var(--black);
-
-}
-
-#parent[data-rotate="true"] .child {
-transform: translate3d(0, 0, -200px) rotateX(45deg) rotateY(0deg)
+    transform: translate3d(0, 0, -200px) rotateX(45deg) rotateY(0deg)
     rotateZ(45deg);
 }
 
 .grandChild {
-width: 20%;
+width: 10%;
+    height: 10%;
 aspect-ratio: 1;
 
 position: relative;
-
+box-sizing: border-box;
 border: 1px solid var(--black);
 transition: transform var(--time);
 display: inline-block;
 margin-right: -4px;
 margin-bottom: -4px;
-
+background-color: green;
 }
 
-#parent[data-rotate="true"] .grandChild {
-transition-delay: var(--time);
-}
+/*#parent[data-rotate="true"] .grandChild {*/
+/*!*transition-delay: var(--time);*!*/
+/*!*}*!*/
 
-#parent[data-rotate="true"] .grandChild:nth-child(2) {
-transform: translate3d(0, 0, 20px);
-}
-
-#parent[data-rotate="true"].grandChild:nth-child(3) {
-transform: translate3d(0, 0, 40px);
-}
+/*#parent[data-rotate="true"].grandChild:nth-child(3) {*/
+/*transform: translate3d(0, 0, 40px);*/
+/*}*/
