@@ -1,7 +1,7 @@
 
 :root{ 
     --black: hsl(0, 0%, 11%);
-    --time: 500ms;
+    --time: 800ms;
 }
 
 
@@ -53,6 +53,8 @@ display: inline-block;
 margin-right: -4px;
 margin-bottom: -4px;
 background-color: green;
+    backface-visibility: visible;
+    transform-origin: center center;
 }
 
 /*#parent[data-rotate="true"] .grandChild {*/
