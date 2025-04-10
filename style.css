@@ -30,7 +30,7 @@ perspective: 1000px;
 .child {
 width: 500px;
 height: 500px;
-border: 1px solid var(--black);
+border: 0px solid var(--black);
 position: relative;
 perspective: 1000px;
 transform-style: preserve-3d;
