@@ -30,9 +30,8 @@ perspective: 1000px;
 .child {
 width: 500px;
 height: 500px;
-
+border: 1px solid var(--black);
 position: relative;
-
 perspective: 1000px;
 transform-style: preserve-3d;
 transition: transform var(--time);
@@ -42,7 +41,6 @@ transition: transform var(--time);
 
 .grandChild {
 width: 10%;
-    height: 10%;
 aspect-ratio: 1;
 
 position: relative;
@@ -52,7 +50,7 @@ transition: transform var(--time);
 display: inline-block;
 margin-right: -4px;
 margin-bottom: -4px;
-background-color: green;
+background-color: purple;
     backface-visibility: visible;
     transform-origin: center center;
 }

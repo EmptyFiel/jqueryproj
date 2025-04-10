@@ -10,7 +10,8 @@ $(document).ready(function(){
 				let row = y + j;
 				if (col >= 0 && row >= 0) {
 					let element = $(`.grandChild[data-row="${row}"][data-col="${col}"]`);
-					element.css('transform', 'translate3d(0px, 0px, 30px)');
+					element.css('transform', 'translate3d(0px, 0px, 40px)');
+					element.css('background-color', 'orange')
 				}
 			}
 		}
@@ -24,12 +25,14 @@ $(document).ready(function(){
 				let row = j;
 					let element = $(`.grandChild[data-row="${row}"][data-col="${col}"]`);
 					element.css('transform', 'translate3d(0px, 0px, 0px)');
+					element.css('background-color', 'purple');
 			}
 		}
 	}
 
 	$('.grandChild').on('mouseover', function() {
 		$(this).css('transform', 'translate3d(0px, 0px, 50px)');
+		$(this).css('background-color', 'red');
 		let y = $(this).attr('data-row');
 		let x = $(this).attr('data-col');
 		checkNear(x, y);
