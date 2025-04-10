@@ -11,7 +11,7 @@ $(document).ready(function(){
 				if (col >= 0 && row >= 0) {
 					let element = $(`.grandChild[data-row="${row}"][data-col="${col}"]`);
 					element.css('transform', 'translate3d(0px, 0px, 40px)');
-					element.css('background-color', 'green')
+					element.css('background-color', 'orange')
 				}
 			}
 		}
