@@ -25,22 +25,26 @@ gap: 16px;
 width: 100%;
 aspect-ratio: 1;
 perspective: 1000px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .child {
-width: 500px;
-height: 500px;
+width: 1000px;
+height: 1000px;
 border: 0px solid var(--black);
 position: relative;
 perspective: 1000px;
 transform-style: preserve-3d;
 transition: transform var(--time);
-    transform: translate3d(0, 0, -200px) rotateX(45deg) rotateY(0deg)
+    transform: translate3d(-200px, -200px, -200px) rotateX(40deg) rotateY(0deg)
     rotateZ(45deg);
+    margin: auto;
 }
 
 .grandChild {
-width: 10%;
+width: 5%;
 aspect-ratio: 1;
 
 position: relative;
@@ -52,14 +56,11 @@ margin-right: -4px;
 margin-bottom: -4px;
 background-color: purple;
     backface-visibility: visible;
-    transform-origin: center center;
+    transform-origin: center;
 }
 
-
-/*#parent[data-rotate="true"] .grandChild {*/
-/*!*transition-delay: var(--time);*!*/
-/*!*}*!*/
-
-/*#parent[data-rotate="true"].grandChild:nth-child(3) {*/
-/*transform: translate3d(0, 0, 40px);*/
-/*}*/
+#slider{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
